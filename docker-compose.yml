@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  node:
+    build:
+      context: .
+      dockerfile: dockerfiles/nuxt.dockerfile
+    extra_hosts:
+      - 'nuxt.test:127.0.0.1'
+    ports:
+      - 3000:3000
+    volumes:
+      - ./src:/app
+      - /app/node_modules
