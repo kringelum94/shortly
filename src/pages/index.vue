@@ -1,9 +1,20 @@
 <template>
-  <h1 class="text-3xl font-bold underline">Hello world!</h1>
+  <div
+    class="
+      min-h-screen
+      bg-[url('@/assets/images/home/background-home-desktop.jpg')]
+      bg-no-repeat
+      bg-cover
+      backdrop-blur-xl
+    "
+  >
+    <app-header></app-header>
+  </div>
 </template>
 
 <script>
+import AppHeader from "~/components/layout/AppHeader.vue";
 export default {
-  name: "IndexPage",
+  components: { AppHeader },
 };
 </script>
