@@ -1,0 +1,27 @@
+<template>
+  <button
+    class="
+      before:absolute
+      before:rounded-full
+      before:h-72
+      before:w-72
+      before:bg-white
+      before:bg-opacity-10
+      before:transition-all
+      rounded-full
+      bg-white
+      text-neutral-900
+      h-72
+      w-72
+      font-serif
+      text-[32px]
+      uppercase
+      flex
+      items-center
+      justify-center
+      hover:before:h-96 hover:before:w-96
+    "
+  >
+    <slot></slot>
+  </button>
+</template>

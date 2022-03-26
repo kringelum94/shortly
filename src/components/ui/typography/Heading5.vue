@@ -1,6 +1,14 @@
 <template>
   <div>
-    <h5 class="text-[28px] font-sans-condensed text-indigo-200 tracking-wide">
+    <h5
+      class="
+        text-[28px]
+        font-sans-condensed
+        text-indigo-200
+        tracking-wider
+        uppercase
+      "
+    >
       <slot></slot>
     </h5>
   </div>
