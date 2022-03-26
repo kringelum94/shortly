@@ -2,13 +2,14 @@
   <div
     class="
       min-h-screen
-      bg-[url('@/assets/images/home/background-home-desktop.jpg')]
-      bg-no-repeat
-      bg-cover
+      bg-no-repeat bg-cover
       backdrop-blur-xl
       flex flex-col
       items-center
       justify-center
+      bg-[url('@/assets/images/home/background-home-mobile.jpg')]
+      md:bg-[url('@/assets/images/home/background-home-tablet.jpg')]
+      lg:bg-[url('@/assets/images/home/background-home-desktop.jpg')]
     "
   >
     <app-header></app-header>
@@ -17,14 +18,17 @@
         flex
         grow
         w-full
-        justify-between
         items-center
         mx-auto
-        px-16
+        flex-col
+        px-4
+        justify-center
+        md:px-16
+        lg:justify-between lg:flex-row
         2xl:max-w-screen-xl
       "
     >
-      <div class="max-w-md">
+      <div class="max-w-md mb-12 lg:mb-0">
         <heading-5>So, you want to travel to</heading-5>
         <heading-1>space</heading-1>
         <app-paragraph>

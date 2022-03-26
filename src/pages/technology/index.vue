@@ -2,13 +2,14 @@
   <div
     class="
       min-h-screen
-      bg-[url('@/assets/images/crew/background-crew-desktop.jpg')]
-      bg-no-repeat
-      bg-cover
+      bg-no-repeat bg-cover
       backdrop-blur-xl
       flex flex-col
       items-center
       justify-center
+      bg-[url('@/assets/images/technology/background-technology-mobile.jpg')]
+      md:bg-[url('@/assets/images/technology/background-technology-tablet.jpg')]
+      lg:bg-[url('@/assets/images/technology/background-technology-desktop.jpg')]
     "
   >
     <app-header></app-header>
@@ -18,7 +19,8 @@
         grow
         w-full
         mx-auto
-        px-8
+        px-4
+        lg:px-8
         xl:px-0 xl:max-w-screen-lg
         2xl:max-w-screen-xl
       "
@@ -27,18 +29,40 @@
         <span class="font-bold text-white/25">03</span>
         <span class="text-white">space launch 101</span>
       </heading-5>
-      <div class="flex grow justify-between items-center">
-        <div class="flex justify-between space-x-8 xl:space-x-16">
-          <div class="flex flex-col justify-between">
+      <div
+        class="
+          flex
+          grow
+          items-center
+          flex-col
+          mt-6
+          lg:justify-between lg:mt-0 lg:flex-row
+        "
+      >
+        <div
+          class="
+            flex
+            justify-between
+            flex-col
+            space-y-6
+            lg:space-y-0 lg:flex-row lg:space-x-8
+            xl:space-x-16
+          "
+        >
+          <div
+            class="
+              flex
+              justify-center
+              space-x-6
+              lg:space-x-0 lg:justify-between lg:flex-col
+            "
+          >
             <div
               v-for="(technology, index) in technologies"
               :key="index"
               class="
-                w-20
-                h-20
                 rounded-full
                 font-serif
-                text-3xl
                 flex
                 border
                 justify-center
@@ -46,6 +70,10 @@
                 cursor-pointer
                 transition-all
                 hover:border-white/100
+                text-base
+                h-10
+                w-10
+                md:w-20 md:h-20 md:text-3xl
               "
               @click="activeTechnology = technology.name"
               :class="
@@ -62,9 +90,10 @@
             <p
               class="
                 font-sans-condensed
-                text-[16px]
                 tracking-[2.7px]
-                text-indigo-200
+                text-indigo-200 text-[14px] text-center
+                md:text-[16px]
+                lg:text-left
               "
             >
               The terminology...
@@ -76,8 +105,13 @@
           </div>
         </div>
         <img
-          class="max-w-xs 2xl:max-w-none"
-          :src="activeTechnologyImage"
+          class="w-full mb-6 order-first lg:hidden"
+          :src="activeTechnologyLandscapeImage"
+          :alt="'image of the ' + activeTechnologyContent.name"
+        />
+        <img
+          class="hidden max-w-xs lg:block 2xl:max-w-none"
+          :src="activeTechnologyPortraitImage"
           :alt="'image of the ' + activeTechnologyContent.name"
         />
       </div>
@@ -116,8 +150,11 @@ export default {
         (technology) => technology.name === this.activeTechnology
       );
     },
-    activeTechnologyImage() {
+    activeTechnologyPortraitImage() {
       return require(`../../assets/images/${this.activeTechnologyContent.images.portrait}`);
+    },
+    activeTechnologyLandscapeImage() {
+      return require(`../../assets/images/${this.activeTechnologyContent.images.landscape}`);
     },
   },
 };

@@ -1,5 +1,17 @@
 <template>
   <div>
-    <h3 class="text-[56px] font-serif text-white uppercase"><slot></slot></h3>
+    <h3
+      class="
+        text-[24px]
+        font-serif
+        text-white
+        uppercase
+        text-center
+        md:text-[56px]
+        lg:text-left
+      "
+    >
+      <slot></slot>
+    </h3>
   </div>
 </template>

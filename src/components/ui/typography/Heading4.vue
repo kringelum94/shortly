@@ -1,6 +1,16 @@
 <template>
   <div>
-    <h4 class="text-[32px] font-serif text-white/50 uppercase">
+    <h4
+      class="
+        text-[16px]
+        font-serif
+        text-white/50
+        uppercase
+        text-center
+        md:text-[32px]
+        lg:text-left
+      "
+    >
       <slot></slot>
     </h4>
   </div>

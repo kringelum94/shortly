@@ -2,13 +2,14 @@
   <div
     class="
       min-h-screen
-      bg-[url('@/assets/images/destination/background-destination-desktop.jpg')]
-      bg-no-repeat
-      bg-cover
+      bg-no-repeat bg-cover
       backdrop-blur-xl
       flex flex-col
       items-center
       justify-center
+      bg-[url('@/assets/images/destination/background-destination-mobile.jpg')]
+      md:bg-[url('@/assets/images/destination/background-destination-tablet.jpg')]
+      lg:bg-[url('@/assets/images/destination/background-destination-desktop.jpg')]
     "
   >
     <app-header></app-header>
@@ -18,7 +19,8 @@
         w-full
         grow
         mx-auto
-        px-8
+        px-4
+        lg:px-8
         xl:px-0 xl:max-w-screen-lg
         2xl:max-w-screen-xl
       "
@@ -27,13 +29,24 @@
         <span class="font-bold text-white/25">01</span>
         <span class="text-white">pick your destination</span>
       </heading-5>
-      <div class="flex grow justify-between items-center">
+      <div
+        class="
+          flex
+          grow
+          justify-between
+          items-center
+          flex-col
+          mt-6
+          lg:mt-0 lg:flex-row
+        "
+      >
         <img
+          class="max-w-[50%]"
           :src="activeDestinationImage"
           :alt="'image of the ' + activeDestinationContent.name"
         />
-        <div class="max-w-md">
-          <div class="2xl:mb-12">
+        <div class="max-w-md mt-6 lg:mt-0">
+          <div class="flex justify-center lg:justify-start mb-4 2xl:mb-12">
             <button
               class="
                 font-sans-condensed
@@ -64,9 +77,22 @@
             {{ activeDestinationContent.description }}
           </app-paragraph>
           <div
-            class="bg-white opacity-30 w-full h-px relative z-50 my-6 2xl:my-12"
+            class="bg-white opacity-30 w-full h-px relative z-40 my-6 2xl:my-12"
           ></div>
-          <div class="grid grid-cols-2">
+          <div
+            class="
+              grid grid-cols-1
+              gap-6
+              justify-items-center
+              text-center
+              mb-6
+              lg:mb-0
+              lg:gap-0
+              lg:text-left
+              lg:justify-items-start
+              lg:grid-cols-2
+            "
+          >
             <div>
               <subheading-2>avg. distance</subheading-2>
               <subheading-1>
