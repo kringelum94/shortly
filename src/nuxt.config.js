@@ -2,6 +2,10 @@ export default {
     // Target: https://go.nuxtjs.dev/config-target
     target: 'static',
 
+    router: {
+        base: '/space-tourism/'
+    },
+
     // Global page headers: https://go.nuxtjs.dev/config-head
     head: {
         title: 'Space Tourism',
