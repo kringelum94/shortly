@@ -20,12 +20,13 @@
         w-full
         mx-auto
         px-4
+        md:pt-6 md:px-6
         lg:px-8
         xl:px-0 xl:max-w-screen-lg
         2xl:max-w-screen-xl
       "
     >
-      <heading-5>
+      <heading-5 class="text-center md:text-left">
         <span class="font-bold text-white/25">02</span>
         <span class="text-white">meet your crew</span>
       </heading-5>
@@ -36,10 +37,10 @@
           items-center
           flex-col
           mt-6
-          lg:justify-between lg:mt-0 lg:flex-row
+          lg:justify-between lg:flex-row
         "
       >
-        <div class="shrink-0 flex flex-col">
+        <div class="shrink-0 grow items-center flex flex-col lg:items-start">
           <heading-4> {{ activeCrewMemberContent.role }} </heading-4>
           <heading-3> {{ activeCrewMemberContent.name }} </heading-3>
           <app-paragraph class="max-w-lg min-h-[150px]">
@@ -83,13 +84,13 @@
             flex
             justify-center
             -order-2
-            self-end
             border-b border-white/25
-            md:order-none
+            md:border-0 md:order-none
+            lg:self-end
           "
         >
           <img
-            class="max-w-[40%] xl:max-w-sm 2xl:max-w-none"
+            class="max-w-[40%] md:max-w-xs xl:max-w-sm 2xl:max-w-none"
             :src="activeCrewMemberImage"
             :alt="'image of the ' + activeCrewMemberContent.name"
           />

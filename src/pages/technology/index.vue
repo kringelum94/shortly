@@ -20,12 +20,13 @@
         w-full
         mx-auto
         px-4
+        md:p-6
         lg:px-8
         xl:px-0 xl:max-w-screen-lg
         2xl:max-w-screen-xl
       "
     >
-      <heading-5>
+      <heading-5 class="text-center md:text-left">
         <span class="font-bold text-white/25">03</span>
         <span class="text-white">space launch 101</span>
       </heading-5>
@@ -36,7 +37,7 @@
           items-center
           flex-col
           mt-6
-          lg:justify-between lg:mt-0 lg:flex-row
+          lg:justify-between lg:flex-row
         "
       >
         <div

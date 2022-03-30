@@ -20,12 +20,13 @@
         grow
         mx-auto
         px-4
+        md:p-6
         lg:px-8
         xl:px-0 xl:max-w-screen-lg
         2xl:max-w-screen-xl
       "
     >
-      <heading-5>
+      <heading-5 class="text-center md:text-left">
         <span class="font-bold text-white/25">01</span>
         <span class="text-white">pick your destination</span>
       </heading-5>
@@ -33,15 +34,17 @@
         class="
           flex
           grow
-          justify-between
           items-center
+          gap-6
           flex-col
           mt-6
-          lg:mt-0 lg:flex-row
+          lg:space-x-8
+          xl:space-x-16
+          lg:flex-row
         "
       >
         <img
-          class="max-w-[50%]"
+          class="max-w-[50%] md:w-80 lg:w-full"
           :src="activeDestinationImage"
           :alt="'image of the ' + activeDestinationContent.name"
         />
@@ -86,11 +89,8 @@
               justify-items-center
               text-center
               mb-6
-              lg:mb-0
-              lg:gap-0
-              lg:text-left
-              lg:justify-items-start
-              lg:grid-cols-2
+              md:grid-cols-2
+              lg:mb-0 lg:gap-0 lg:text-left lg:justify-items-start
             "
           >
             <div>

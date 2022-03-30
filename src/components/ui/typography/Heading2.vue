@@ -7,8 +7,8 @@
         text-white
         uppercase
         text-center
-        md:text-[100px]
-        lg:text-left
+        md:text-[80px]
+        lg:text-[100px] lg:text-left
       "
     >
       <slot></slot>

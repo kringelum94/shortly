@@ -28,8 +28,10 @@
         2xl:max-w-screen-xl
       "
     >
-      <div class="max-w-md mb-12 lg:mb-0">
-        <heading-5>So, you want to travel to</heading-5>
+      <div class="max-w-md mb-12 md:mb-32 lg:mb-0">
+        <heading-5 class="text-center lg:text-left">
+          So, you want to travel to
+        </heading-5>
         <heading-1>space</heading-1>
         <app-paragraph>
           Let’s face it; if you want to go to space, you might as well genuinely

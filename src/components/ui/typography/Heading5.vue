@@ -7,9 +7,7 @@
         tracking-wider
         text-[16px]
         uppercase
-        text-center
         md:text-[28px]
-        lg:text-left
       "
     >
       <slot></slot>

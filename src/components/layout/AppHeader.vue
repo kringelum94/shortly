@@ -6,7 +6,8 @@
       justify-between
       items-center
       p-6
-      lg:px-0 lg:py-8 lg:justify-around
+      md:p-0
+      lg:py-6 lg:justify-around
       2xl:py-12
     "
   >
@@ -17,6 +18,7 @@
         cursor-pointer
         transition-all
         hover:scale-125
+        md:px-6
         lg:px-16
         2xl:px-32
       "
@@ -143,9 +145,9 @@
         justify-around
         items-center
         shrink-0
-        w-1/2
         px-10
         md:flex
+        lg:w-1/2
         2xl:px-20
       "
     >
