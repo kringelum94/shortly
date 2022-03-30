@@ -90,7 +90,7 @@
           "
         >
           <img
-            class="max-w-[40%] md:max-w-xs xl:max-w-sm 2xl:max-w-none"
+            class="max-w-[40%] md:max-w-xs xl:max-w-sm 2xl:max-w-md"
             :src="activeCrewMemberImage"
             :alt="'image of the ' + activeCrewMemberContent.name"
           />
